@@ -247,6 +247,7 @@
     grid.querySelectorAll(".box").forEach(attachBoxAddButton);
     grid.querySelectorAll(".col > .block-root").forEach(attachSpacingControls);
     styleCalories();
+    styleInlinePrices();
     syncRightColumnSpacing();
   }
 
@@ -367,6 +368,16 @@
       calories.className = "item-calories";
       calories.textContent = match[2];
       desc.appendChild(calories);
+    });
+  }
+
+  function styleInlinePrices() {
+    grid.querySelectorAll(".pizza-item, .pizza-sub, .wings-line, .box-sub").forEach((field) => {
+      if (field.querySelector(".inline-price")) return;
+      const html = field.innerHTML;
+      const match = html.match(/^(.*?)(\s£\d+(?:\.\d+)?)$/);
+      if (!match) return;
+      field.innerHTML = match[1] + '<span class="inline-price">' + match[2] + "</span>";
     });
   }
 

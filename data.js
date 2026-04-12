@@ -43,7 +43,7 @@ window.CLAPHAM_NORTH_MENU_DATA = {
           { name: "Lemon possett,", desc: "lemon zest, mint (V) - 529 kcal", price: "£7" },
           { name: "Flourless Chocolate cake,", desc: "vanilla ice cream (V) - 544 kcal", price: "£8.5" },
           { name: "Affogato, vegan vanilla ice cream,", desc: "coffee, cocoa powder (VG) - 139 kcal", price: "£6.5" },
-          { name: "Ice cream,", desc: "Vanilla, Chocolate, Salted Caramel, Honeycomb (VG) - ", price: "£2.5" }
+          { name: "Ice cream,", desc: "Vanilla, Chocolate, Salted Caramel, Honeycomb (VG) -", price: "£2.5" }
         ]
       }
     ],
