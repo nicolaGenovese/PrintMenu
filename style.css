@@ -1,0 +1,225 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Roboto Mono', 'Courier New', monospace;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font: inherit;
+  font-size: 9pt;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+.editor-hint {
+  position: fixed;
+  top: 20px;
+  right: 140px;
+  z-index: 1000;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font: inherit;
+  font-size: 8pt;
+  padding: 10px 12px;
+}
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 6.5mm 9.5mm;
+  background: #fff;
+  color: #000;
+  font-size: 8pt;
+  line-height: 1.14;
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5mm;
+}
+.logo img {
+  max-width: 46mm;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 6mm;
+  flex: 1;
+}
+.col {
+  position: relative;
+}
+.menu-section,
+.editable-section {
+  position: relative;
+}
+.section-title {
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-top: 2px solid #000;
+  padding-top: 2px;
+  margin-bottom: 2px;
+  position: relative;
+}
+.section-note {
+  font-size: 7pt;
+  color: #333;
+  margin-bottom: 2px;
+}
+.section-add-button {
+  display: inline-block;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font: inherit;
+  font-size: 7pt;
+  padding: 2px 6px;
+  margin: 0 0 3px;
+  cursor: pointer;
+}
+.item {
+  margin-bottom: 2px;
+  position: relative;
+}
+.item-name { font-weight: 700; font-size: 8pt; }
+.item-desc { font-size: 7pt; color: #333; }
+.item-price { font-size: 7.6pt; font-weight: 700; }
+.item-calories { font-size: 7.6pt; font-weight: 700; color: #000; }
+.editable-field:focus {
+  outline: 1px dashed #000;
+  outline-offset: 1px;
+}
+.item-controls {
+  position: absolute;
+  top: 0;
+  right: -28px;
+  display: flex;
+}
+.item-delete {
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font: inherit;
+  font-size: 7pt;
+  line-height: 1;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+.spacing-controls {
+  position: absolute;
+  top: 0;
+  left: -34px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 3px 2px;
+  border: 1px solid #000;
+  background: #fff;
+}
+.spacing-button {
+  min-width: 20px;
+  border: 1px solid #000;
+  background: #f7f7f7;
+  color: #000;
+  font: inherit;
+  font-size: 7pt;
+  line-height: 1;
+  padding: 3px 4px;
+  cursor: pointer;
+}
+.box-add-button {
+  display: inline-block;
+  border: 1px solid #000;
+  background: #fff;
+  color: #000;
+  font: inherit;
+  font-size: 7pt;
+  padding: 2px 6px;
+  margin: 3px auto 0;
+  cursor: pointer;
+}
+.box {
+  border: 2px dashed #000;
+  padding: 4px 7px;
+  margin-bottom: 3mm;
+  position: relative;
+}
+.wings-box {
+  margin-top: 0;
+}
+.wings-box.wings-box-expanded {
+  margin-top: 14mm;
+}
+.box-title {
+  font-size: 10pt;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.box-sub {
+  font-size: 8pt;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1px;
+}
+.pizza-item { text-align: center; font-weight: 700; font-size: 8pt; }
+.pizza-sub { text-align: center; font-size: 7pt; color: #333; margin-bottom: 1px; }
+.pizza-entry {
+  position: relative;
+  margin-bottom: 1px;
+}
+.pizza-entry .item-controls,
+.wings-entry .item-controls {
+  right: -24px;
+}
+.wings-entry {
+  position: relative;
+  margin-bottom: 1px;
+}
+.wings-line { text-align: center; font-size: 7.6pt; font-weight: 700; }
+.wings-prices {
+  display: flex;
+  justify-content: space-between;
+  font-size: 7.5pt;
+  font-weight: 700;
+  margin-top: 3px;
+  border-top: 1px solid #000;
+  padding-top: 2px;
+}
+.add-on { font-size: 7.6pt; font-weight: 700; margin-top: 2px; }
+.footer {
+  border-top: 1px solid #000;
+  margin-top: 2mm;
+  padding-top: 2px;
+  font-size: 6pt;
+  text-align: center;
+  font-style: italic;
+  line-height: 1.18;
+  margin-top: auto;
+}
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  body { background: #fff; padding: 0; }
+  .print-button, .editor-hint, .section-add-button, .box-add-button, .item-controls, .spacing-controls { display: none !important; }
+  .page { width: 210mm; min-height: 297mm; }
+}
