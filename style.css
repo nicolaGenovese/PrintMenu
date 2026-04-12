@@ -35,7 +35,7 @@ body {
 .page {
   width: 210mm;
   min-height: 297mm;
-  padding: 6.5mm 9.5mm;
+  padding: 1.5mm 9.5mm 6.5mm;
   background: #fff;
   color: #000;
   font-size: 8pt;

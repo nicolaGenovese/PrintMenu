@@ -70,6 +70,9 @@
     const title = document.createElement("div");
     title.className = "section-title";
     title.textContent = blockData.title;
+    title.contentEditable = "true";
+    title.spellcheck = false;
+    title.classList.add("editable-field");
     block.appendChild(title);
 
     if (blockData.note) {
