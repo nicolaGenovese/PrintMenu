@@ -11,14 +11,14 @@ window.CLAPHAM_NORTH_MENU_DATA = {
         type: "section",
         title: "Small Plates",
         items: [
-          { name: "Onion Bhajis,", desc: "cucumber & mint yoghurt (v) - 377 kcal", price: "£8" },
-          { name: "Curried Lamb leg kebabs,", desc: "cucumber & mint yoghurt - 811 kcal", price: "£12" },
-          { name: "Loaded Tater Tots,", desc: "chicken, gruyere cheese, crispy onion, pico de gallo, hot honey mayo - 834 kcal", price: "£9.5" },
-          { name: "Cheeseburger tacos,", desc: "pico de gallo, crispy onions, burger sauce - 318 kcal", price: "£9" },
-          { name: "Halloumi with jerk gravy,", desc: "chilli, spring onion - 892 kcal", price: "£10" },
-          { name: "Bang Bang Cauliflower,", desc: "gochujang sauce, spring onion, chilli (Vg) - 98 kcal", price: "£8" },
-          { name: "Lamb shoulder sliders,", desc: "cucumber & mint yoghurt, baby gem lettuce - 416 kcal", price: "£8" },
-          { name: "Beef burger sliders,", desc: "cheese, baby gem lettuce, tomato - 576 kcal", price: "£8.5" },
+          { name: "Onion Bhajis,", desc: "cucumber & mint yoghurt (v) - 264 kcal", price: "£8" },
+          { name: "Curried Lamb leg kebabs,", desc: "cucumber & mint yoghurt - 1157 kcal", price: "£12" },
+          { name: "Loaded Tater Tots,", desc: "chicken, gruyere cheese, crispy onion, pico de gallo, hot honey mayo - 834 kcal", price: "£8.5" },
+          { name: "Cheeseburger tacos,", desc: "pico de gallo, crispy onions, burger sauce - 302 kcal", price: "£9" },
+          { name: "Halloumi with jerk gravy,", desc: "chilli, spring onion - 441 kcal", price: "£10" },
+          { name: "Bang Bang Cauliflower,", desc: "gochujang sauce, spring onion, chilli (Vg) - 155 kcal", price: "£8" },
+          { name: "Lamb shoulder sliders,", desc: "cucumber & mint yoghurt, baby gem lettuce - 378 kcal", price: "£8" },
+          { name: "Beef burger sliders,", desc: "cheese, baby gem lettuce, tomato - 488 kcal", price: "£8.5" },
           { name: "Cheesy truffle fries,", desc: "gruyere cheese - 549 kcal", price: "£8.5" }
         ]
       },
@@ -27,11 +27,11 @@ window.CLAPHAM_NORTH_MENU_DATA = {
         title: "Mains",
         marginTopMm: 5,
         items: [
-          { name: "Cyder Battered Haddock & Triple cooked chips,", desc: "tartar sauce & mushy peas - 1090 kcal", price: "£19.5" },
+          { name: "Cyder Battered Haddock & Triple cooked chips,", desc: "tartar sauce & mushy peas - 1090 kcal", price: "£19" },
           { name: "Hertfordshire chicken caesar salad,", desc: "cos lettuce, anchovies, brioche croutons & soft St Ewes egg - 701 kcal", price: "£17" },
-          { name: "Loaded Nachos,", desc: "Beef ragu, Gruyere cheese, sour cream, guacamole, pico de gallo, Jalapenos - 422 kcal", price: "£18.5" },
-          { name: "Jacket potato,", desc: "beef ragu, gruyere cheese, aioli coleslaw & dill - 549 kcal", price: "£9.5" },
-          { name: "Hot dog,", desc: "ketchup, american mustard, crispy onions, gherkin, fries - 487 kcal", price: "£14" }
+          { name: "Loaded Nachos,", desc: "Beef ragu, Gruyere cheese, sour cream, guacamole, pico de gallo, Jalapenos - 561 kcal", price: "17.5" },
+          { name: "Jacket potato,", desc: "beef ragu, gruyere cheese, aioli coleslaw & dill - 692 kcal", price: "£12" },
+          { name: "Hot dog,", desc: "ketchup, american mustard, crispy onions, gherkin, fries - 488 kcal", price: "£14" }
         ]
       },
       {
@@ -39,9 +39,9 @@ window.CLAPHAM_NORTH_MENU_DATA = {
         title: "Puds",
         marginTopMm: 5,
         items: [
-          { name: "Eton Mess,", desc: "merringue, strawberries, chocolate flakes (V) - 464 kcal", price: "£8.5" },
+          { name: "Eton Mess,", desc: "merringue, strawberries, chocolate flakes (V) - 276 kcal", price: "£8.5" },
           { name: "Lemon possett,", desc: "lemon zest, mint (V) - 529 kcal", price: "£7" },
-          { name: "Flourless Chocolate cake,", desc: "vanilla ice cream (V) - 544 kcal", price: "£8.5" },
+          { name: "Flourless Chocolate cake,", desc: "vanilla ice cream (V) - 501 kcal", price: "£8.5" },
           { name: "Affogato, vegan vanilla ice cream,", desc: "coffee, cocoa powder (VG) - 139 kcal", price: "£6.5" },
           { name: "Ice cream,", desc: "Vanilla, Chocolate, Salted Caramel, Honeycomb (VG) -", price: "£2.5" }
         ]
@@ -111,11 +111,11 @@ window.CLAPHAM_NORTH_MENU_DATA = {
         items: [
           { name: "Short rib & brisket British beef burger,", desc: "sesame seeded bun, cheese, pickles, burger sauce, crispy onions, fries - 1280 kcal", price: "£17.50" },
           { name: "Plant Burger,", desc: "sesame seeded bun, vegan cheddar, pickles, burger sauce, crispy onion, fries - 1076 kcal", price: "£16" },
-          { name: "Chicken breast burger,", desc: "sesame seeded bun, baby gem lettuce, aioli coleslaw, fries - 1036 kcal", price: "£17.50" },
-          { name: "Mango & scotch bonnet chicken breast burger,", desc: "sesame seeded bun, baby gem lettuce, aioli coleslaw, fries - 1087 kcal", price: "£18" },
-          { name: "Smashed beef burger,", desc: "sesame seeded bun, burger sauce, cheese, baby gem lettuce, onion, gherkin, tomato, fries - 1062 kcal", price: "£17.50" },
-          { name: "Mango & scotch bonnet hot smashed beef burger,", desc: "sesame seeded bun, cheese, baby gem lettuce, onion, burger sauce, gherkin, tomato, fries - 1079 kcal", price: "£18" },
-          { name: "Onion bhaji burger,", desc: "sesame seeded bun, baby gem lettuce, tomato, cucumber & mint yoghurt, fries - 1030 kcal", price: "£16.50" }
+          { name: "Chicken breast burger,", desc: "sesame seeded bun, baby gem lettuce, aioli coleslaw, fries - 1385 kcal", price: "£17.50" },
+          { name: "Mango & scotch bonnet chicken breast burger,", desc: "sesame seeded bun, baby gem lettuce, aioli coleslaw, fries - 1365 kcal", price: "£18" },
+          { name: "Smashed beef burger,", desc: "sesame seeded bun, burger sauce, cheese, baby gem lettuce, onion, gherkin, tomato, fries - 1069 kcal", price: "£17.50" },
+          { name: "Mango & scotch bonnet hot smashed beef burger,", desc: "sesame seeded bun, cheese, baby gem lettuce, onion, burger sauce, gherkin, tomato, fries - 1050 kcal", price: "£18" },
+          { name: "Onion bhaji burger,", desc: "sesame seeded bun, baby gem lettuce, tomato, cucumber & mint yoghurt, fries - 856 kcal", price: "£16.50" }
         ],
         addOn: "ADD BACON £1 – ADD EXTRA PATTY £2"
       }
