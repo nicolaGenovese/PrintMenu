@@ -18,7 +18,7 @@ window.CLAPHAM_NORTH_MENU_DATA = {
           { name: "Halloumi with jerk gravy,", desc: "chilli, spring onion - 892 kcal", price: "£10" },
           { name: "Bang Bang Cauliflower,", desc: "gochujang sauce, spring onion, chilli (Vg) - 98 kcal", price: "£8" },
           { name: "Lamb shoulder sliders,", desc: "cucumber & mint yoghurt, baby gem lettuce - 416 kcal", price: "£8" },
-          { name: "Beef burger sliders,", desc: "cheese, baby gem lettuce - 576 kcal", price: "£8.5" },
+          { name: "Beef burger sliders,", desc: "cheese, baby gem lettuce, tomato - 576 kcal", price: "£8.5" },
           { name: "Cheesy truffle fries,", desc: "gruyere cheese - 549 kcal", price: "£8.5" }
         ]
       },
@@ -52,7 +52,7 @@ window.CLAPHAM_NORTH_MENU_DATA = {
         type: "editableSection",
         title: "Sunday Roast",
         removable: true,
-        note: "All roasts served with roasted seasonal vegetables, roast potatoes, creamed leeks, braised red cabbage, yorkshire pudding & gravy.",
+        note: "All roasts served with roast potatoes, carrots, butternut squash puree,creamed leeks, braised red cabbage, yorkshire pudding & gravy.",
         items: [
           { name: "Lemon & Thyme Roasted Chicken", price: "£22.5" },
           { name: "35 Day Aged West Country Rump of Beef", price: "£24" },
@@ -106,7 +106,7 @@ window.CLAPHAM_NORTH_MENU_DATA = {
       },
       {
         type: "section",
-        title: "Buns",
+        title: "Buns (GF bun available)",
         marginTopMm: 4,
         items: [
           { name: "Short rib & brisket British beef burger,", desc: "sesame seeded bun, cheese, pickles, burger sauce, crispy onions, fries - 1280 kcal", price: "£17.50" },
