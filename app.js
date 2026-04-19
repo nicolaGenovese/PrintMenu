@@ -356,21 +356,32 @@
   }
 
   function styleCalories() {
-    // Calories are stored inside the description text in the data file, then
-    // split out visually so they can share the same emphasis as prices.
-    grid.querySelectorAll(".item-desc").forEach((desc) => {
-      if (desc.querySelector(".item-calories")) return;
-      const text = desc.textContent || "";
-      const match = text.match(/^(.*?)(\s*-\s*.*kcal)$/i);
-      if (!match) return;
+    // Calorie text is embedded in multiple menu fields, including lines that
+    // are otherwise bold. Split it into its own span so it can stay regular.
+    grid.querySelectorAll(".item-name, .item-desc, .pizza-item, .pizza-sub, .wings-line").forEach((field) => {
+      if (field.querySelector(".item-calories")) return;
 
-      desc.textContent = "";
-      desc.append(document.createTextNode(match[1]));
+      const text = field.textContent || "";
+      const priceMatch = text.match(/(\s£\d+(?:\.\d+)?)$/);
+      const priceText = priceMatch ? priceMatch[1] : "";
+      const textWithoutPrice = priceText ? text.slice(0, -priceText.length) : text;
+      const caloriesMatch = textWithoutPrice.match(/^(.*?)(\s*-\s*(?:\d+\s*kcal|kcal\s*\d+))$/i);
+      if (!caloriesMatch) return;
+
+      field.textContent = "";
+      field.append(document.createTextNode(caloriesMatch[1]));
 
       const calories = document.createElement("span");
       calories.className = "item-calories";
-      calories.textContent = match[2];
-      desc.appendChild(calories);
+      calories.textContent = caloriesMatch[2];
+      field.appendChild(calories);
+
+      if (priceText) {
+        const price = document.createElement("span");
+        price.className = "inline-price";
+        price.textContent = priceText;
+        field.appendChild(price);
+      }
     });
   }
 

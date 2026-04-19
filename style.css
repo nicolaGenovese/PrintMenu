@@ -101,7 +101,7 @@ body {
 .item-desc { font-size: 7pt; color: #333; }
 .item-price { font-size: 7.6pt; font-weight: 700; }
 .inline-price { font-weight: 700; color: #000; }
-.item-calories { font-size: 7.6pt; font-weight: 700; color: #000; }
+.item-calories { font-size: inherit; font-weight: 400; color: #000; }
 .editable-field:focus {
   outline: 1px dashed #000;
   outline-offset: 1px;
