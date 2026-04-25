@@ -19,7 +19,8 @@ window.CLAPHAM_NORTH_MENU_DATA = {
           { name: "Bang Bang Cauliflower,", desc: "gochujang sauce, spring onion, chilli (Vg) - 155 kcal", price: "£8" },
           { name: "Lamb shoulder sliders,", desc: "cucumber & mint yoghurt, baby gem lettuce - 378 kcal", price: "£8" },
           { name: "Beef burger sliders,", desc: "cheese, baby gem lettuce, tomato - 488 kcal", price: "£8.5" },
-          { name: "Cheesy truffle fries,", desc: "gruyere cheese - 549 kcal", price: "£8.5" }
+          { name: "Cheesy truffle fries,", desc: "gruyere cheese - 549 kcal", price: "£8.5" },
+          { name: "Triple cooked chips/Skinny fries,", desc: " - 540 kcal", price: "£4.5" }
         ]
       },
       {
