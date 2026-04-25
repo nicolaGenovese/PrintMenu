@@ -161,6 +161,9 @@ body {
   margin-bottom: 3mm;
   position: relative;
 }
+.col:last-child .box {
+  margin-bottom: 2mm;
+}
 .wings-box {
   margin-top: 0;
 }
@@ -222,5 +225,47 @@ body {
 @media print {
   body { background: #fff; padding: 0; }
   .print-button, .editor-hint, .section-add-button, .box-add-button, .item-controls, .spacing-controls { display: none !important; }
-  .page { width: 210mm; min-height: 297mm; }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 1mm 8.5mm 5mm;
+    font-size: 7.7pt;
+    line-height: 1.08;
+  }
+  .logo {
+    margin-bottom: 2.2mm;
+  }
+  .logo img {
+    max-width: 42mm;
+  }
+  .grid {
+    gap: 0 5mm;
+  }
+  .section-title {
+    padding-top: 1px;
+    margin-bottom: 1px;
+  }
+  .section-note,
+  .item {
+    margin-bottom: 1px;
+  }
+  .box {
+    padding: 3px 6px;
+    margin-bottom: 1.5mm;
+  }
+  .col:last-child .box {
+    margin-bottom: 1.5mm;
+  }
+  .wings-prices {
+    margin-top: 2px;
+    padding-top: 1px;
+  }
+  .add-on {
+    margin-top: 1px;
+  }
+  .footer {
+    padding-top: 1px;
+    font-size: 5.7pt;
+    line-height: 1.12;
+  }
 }

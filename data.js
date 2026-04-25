@@ -65,7 +65,7 @@ window.CLAPHAM_NORTH_MENU_DATA = {
         type: "editableSection",
         title: "Sunday Sides",
         removable: true,
-        marginTopMm: 3,
+        marginTopMm: 1,
         items: [
           { name: "Cauliflower Cheese - kcal 429", price: "£7.50" },
           { name: "Sunday Yorkshire Pudding, Gravy - kcal 415", price: "£4" },
@@ -78,7 +78,7 @@ window.CLAPHAM_NORTH_MENU_DATA = {
         type: "box",
         kind: "pizza",
         removable: true,
-        marginTopMm: 4,
+        marginTopMm: 2,
         titleHtml: "Pizza Slices<br>(Weekends Only)",
         addButtonLabel: "+ Add pizza line",
         lines: [
@@ -107,7 +107,7 @@ window.CLAPHAM_NORTH_MENU_DATA = {
       {
         type: "section",
         title: "Buns (GF bun available)",
-        marginTopMm: 4,
+        marginTopMm: 2,
         items: [
           { name: "Short rib & brisket British beef burger,", desc: "sesame seeded bun, cheese, pickles, burger sauce, crispy onions, fries - 1280 kcal", price: "£17.50" },
           { name: "Plant Burger,", desc: "sesame seeded bun, vegan cheddar, pickles, burger sauce, crispy onion, fries - 1076 kcal", price: "£16" },
