@@ -243,6 +243,7 @@
 
   function initializeEditing() {
     // Rendering is data-driven, but editing is attached to the generated DOM.
+    attachLogoMoveControls();
     grid.querySelectorAll(".item").forEach(makeEditableItem);
     grid.querySelectorAll(".pizza-entry").forEach(makePizzaEditable);
     grid.querySelectorAll(".wings-entry").forEach(makeWingsEditable);
@@ -410,6 +411,127 @@
     const current = getMarginTopMm(element);
     const next = Math.max(0, Math.round((current + delta) * 10) / 10);
     element.style.marginTop = next + "mm";
+  }
+
+  function getLogoOffset() {
+    return {
+      x: parseFloat(logoContainer.dataset.logoOffsetX || "0") || 0,
+      y: parseFloat(logoContainer.dataset.logoOffsetY || "0") || 0
+    };
+  }
+
+  function setLogoOffset(x, y) {
+    const nextX = Math.round(x * 10) / 10;
+    const nextY = Math.round(y * 10) / 10;
+    logoContainer.dataset.logoOffsetX = String(nextX);
+    logoContainer.dataset.logoOffsetY = String(nextY);
+    logoContainer.style.transform = "translate(" + nextX + "mm, " + nextY + "mm)";
+  }
+
+  function moveLogo(deltaX, deltaY) {
+    const current = getLogoOffset();
+    setLogoOffset(current.x + deltaX, current.y + deltaY);
+  }
+
+  function attachLogoMoveControls() {
+    if (logoContainer.querySelector(".logo-move-controls")) return;
+
+    const controls = document.createElement("div");
+    controls.className = "logo-move-controls";
+
+    [
+      { label: "↑", title: "Move logo up", x: 0, y: -1 },
+      { label: "←", title: "Move logo left", x: -1, y: 0 },
+      { label: "→", title: "Move logo right", x: 1, y: 0 },
+      { label: "↓", title: "Move logo down", x: 0, y: 1 }
+    ].forEach((controlData) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "logo-move-button";
+      button.textContent = controlData.label;
+      button.title = controlData.title;
+      button.addEventListener("click", () => moveLogo(controlData.x, controlData.y));
+      controls.appendChild(button);
+    });
+
+    logoContainer.appendChild(controls);
+    logoContainer.appendChild(createLogoSizeControls());
+    setLogoOffset(0, 2);
+    attachLogoDrag();
+  }
+
+  function getLogoWidthMm() {
+    const image = logoContainer.querySelector("img");
+    const savedWidth = parseFloat(logoContainer.dataset.logoWidth || "");
+    if (savedWidth) return savedWidth;
+    if (!image) return 46;
+
+    const computedWidth = parseFloat(window.getComputedStyle(image).width) || 0;
+    return computedWidth ? computedWidth / 3.7795275591 : 46;
+  }
+
+  function setLogoWidth(width) {
+    const image = logoContainer.querySelector("img");
+    if (!image) return;
+
+    const nextWidth = Math.min(90, Math.max(18, Math.round(width * 10) / 10));
+    logoContainer.dataset.logoWidth = String(nextWidth);
+    image.style.maxWidth = nextWidth + "mm";
+  }
+
+  function resizeLogo(delta) {
+    setLogoWidth(getLogoWidthMm() + delta);
+  }
+
+  function createLogoSizeControls() {
+    const controls = document.createElement("div");
+    controls.className = "logo-size-controls";
+
+    [
+      { label: "-", title: "Make logo smaller", delta: -2 },
+      { label: "+", title: "Make logo bigger", delta: 2 }
+    ].forEach((controlData) => {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "logo-size-button";
+      button.textContent = controlData.label;
+      button.title = controlData.title;
+      button.addEventListener("click", () => resizeLogo(controlData.delta));
+      controls.appendChild(button);
+    });
+
+    return controls;
+  }
+
+  function attachLogoDrag() {
+    const image = logoContainer.querySelector("img");
+    if (!image) return;
+
+    image.addEventListener("pointerdown", (event) => {
+      event.preventDefault();
+      image.setPointerCapture(event.pointerId);
+
+      const startX = event.clientX;
+      const startY = event.clientY;
+      const startOffset = getLogoOffset();
+
+      function onPointerMove(moveEvent) {
+        const deltaX = (moveEvent.clientX - startX) / 3.7795275591;
+        const deltaY = (moveEvent.clientY - startY) / 3.7795275591;
+        setLogoOffset(startOffset.x + deltaX, startOffset.y + deltaY);
+      }
+
+      function onPointerUp(upEvent) {
+        image.releasePointerCapture(upEvent.pointerId);
+        image.removeEventListener("pointermove", onPointerMove);
+        image.removeEventListener("pointerup", onPointerUp);
+        image.removeEventListener("pointercancel", onPointerUp);
+      }
+
+      image.addEventListener("pointermove", onPointerMove);
+      image.addEventListener("pointerup", onPointerUp);
+      image.addEventListener("pointercancel", onPointerUp);
+    });
   }
 
   function attachSpacingControls(element) {

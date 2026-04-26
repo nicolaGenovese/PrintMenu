@@ -16,7 +16,7 @@ body {
   background: #fff;
   color: #000;
   font: inherit;
-  font-size: 9pt;
+  font-size: 10.6pt;
   padding: 10px 14px;
   cursor: pointer;
 }
@@ -29,7 +29,7 @@ body {
   background: #fff;
   color: #000;
   font: inherit;
-  font-size: 8pt;
+  font-size: 9.4pt;
   padding: 10px 12px;
 }
 .page {
@@ -38,7 +38,7 @@ body {
   padding: 1.5mm 9.5mm 6.5mm;
   background: #fff;
   color: #000;
-  font-size: 8pt;
+  font-size: 9.4pt;
   line-height: 1.14;
   display: flex;
   flex-direction: column;
@@ -47,12 +47,16 @@ body {
   display: flex;
   justify-content: center;
   margin-bottom: 3.5mm;
+  position: relative;
+  touch-action: none;
 }
 .logo img {
   max-width: 46mm;
   width: 100%;
   height: auto;
   display: block;
+  cursor: move;
+  user-select: none;
 }
 .grid {
   display: grid;
@@ -68,7 +72,7 @@ body {
   position: relative;
 }
 .section-title {
-  font-size: 10pt;
+  font-size: 11.8pt;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -78,7 +82,7 @@ body {
   position: relative;
 }
 .section-note {
-  font-size: 7pt;
+  font-size: 8.3pt;
   color: #333;
   margin-bottom: 2px;
 }
@@ -88,7 +92,7 @@ body {
   background: #fff;
   color: #000;
   font: inherit;
-  font-size: 7pt;
+  font-size: 8.3pt;
   padding: 2px 6px;
   margin: 0 0 3px;
   cursor: pointer;
@@ -97,9 +101,9 @@ body {
   margin-bottom: 2px;
   position: relative;
 }
-.item-name { font-weight: 700; font-size: 8pt; }
-.item-desc { font-size: 7pt; color: #333; }
-.item-price { font-size: 7.6pt; font-weight: 700; }
+.item-name { font-weight: 700; font-size: 9.4pt; }
+.item-desc { font-size: 8.3pt; color: #333; }
+.item-price { font-size: 9pt; font-weight: 700; }
 .inline-price { font-weight: 700; color: #000; }
 .item-calories { font-size: inherit; font-weight: 400; color: #000; }
 .editable-field:focus {
@@ -117,7 +121,7 @@ body {
   background: #fff;
   color: #000;
   font: inherit;
-  font-size: 7pt;
+  font-size: 8.3pt;
   line-height: 1;
   padding: 3px 5px;
   cursor: pointer;
@@ -139,7 +143,70 @@ body {
   background: #f7f7f7;
   color: #000;
   font: inherit;
-  font-size: 7pt;
+  font-size: 8.3pt;
+  line-height: 1;
+  padding: 3px 4px;
+  cursor: pointer;
+}
+.logo-move-controls {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 18px);
+  grid-template-rows: repeat(3, 18px);
+  gap: 2px;
+  transform: translateX(calc(-50% + 33mm));
+  padding: 3px;
+  border: 1px solid #000;
+  background: #fff;
+  z-index: 2;
+}
+.logo-move-button {
+  border: 1px solid #000;
+  background: #f7f7f7;
+  color: #000;
+  font: inherit;
+  font-size: 9.4pt;
+  line-height: 1;
+  padding: 0;
+  cursor: pointer;
+}
+.logo-move-button:nth-child(1) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.logo-move-button:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+.logo-move-button:nth-child(3) {
+  grid-column: 3;
+  grid-row: 2;
+}
+.logo-move-button:nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
+}
+.logo-size-controls {
+  position: absolute;
+  top: 20mm;
+  left: 50%;
+  display: flex;
+  gap: 3px;
+  transform: translateX(calc(-50% + 33mm));
+  padding: 3px;
+  border: 1px solid #000;
+  background: #fff;
+  z-index: 2;
+}
+.logo-size-button {
+  min-width: 22px;
+  border: 1px solid #000;
+  background: #f7f7f7;
+  color: #000;
+  font: inherit;
+  font-size: 9.4pt;
   line-height: 1;
   padding: 3px 4px;
   cursor: pointer;
@@ -150,7 +217,7 @@ body {
   background: #fff;
   color: #000;
   font: inherit;
-  font-size: 7pt;
+  font-size: 8.3pt;
   padding: 2px 6px;
   margin: 3px auto 0;
   cursor: pointer;
@@ -171,20 +238,20 @@ body {
   margin-top: 14mm;
 }
 .box-title {
-  font-size: 10pt;
+  font-size: 11.8pt;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   text-align: center;
 }
 .box-sub {
-  font-size: 8pt;
+  font-size: 9.4pt;
   font-weight: 700;
   text-align: center;
   margin-bottom: 1px;
 }
-.pizza-item { text-align: center; font-weight: 700; font-size: 8pt; }
-.pizza-sub { text-align: center; font-size: 7pt; color: #333; margin-bottom: 1px; }
+.pizza-item { text-align: center; font-weight: 700; font-size: 9.4pt; }
+.pizza-sub { text-align: center; font-size: 8.3pt; color: #333; margin-bottom: 1px; }
 .pizza-entry {
   position: relative;
   margin-bottom: 1px;
@@ -197,22 +264,22 @@ body {
   position: relative;
   margin-bottom: 1px;
 }
-.wings-line { text-align: center; font-size: 7.6pt; font-weight: 700; }
+.wings-line { text-align: center; font-size: 9pt; font-weight: 700; }
 .wings-prices {
   display: flex;
   justify-content: space-between;
-  font-size: 7.5pt;
+  font-size: 8.8pt;
   font-weight: 700;
   margin-top: 3px;
   border-top: 1px solid #000;
   padding-top: 2px;
 }
-.add-on { font-size: 7.6pt; font-weight: 700; margin-top: 2px; }
+.add-on { font-size: 9pt; font-weight: 700; margin-top: 2px; }
 .footer {
   border-top: 1px solid #000;
   margin-top: 5mm;
   padding-top: 2px;
-  font-size: 6pt;
+  font-size: 7.1pt;
   text-align: center;
   font-style: italic;
   line-height: 1.18;
@@ -224,12 +291,12 @@ body {
 }
 @media print {
   body { background: #fff; padding: 0; }
-  .print-button, .editor-hint, .section-add-button, .box-add-button, .item-controls, .spacing-controls { display: none !important; }
+  .print-button, .editor-hint, .section-add-button, .box-add-button, .item-controls, .spacing-controls, .logo-move-controls, .logo-size-controls { display: none !important; }
   .page {
     width: 210mm;
     min-height: 297mm;
     padding: 1mm 8.5mm 5mm;
-    font-size: 7.7pt;
+    font-size: 9.1pt;
     line-height: 1.08;
   }
   .logo {
@@ -265,7 +332,7 @@ body {
   }
   .footer {
     padding-top: 1px;
-    font-size: 5.7pt;
+    font-size: 6.8pt;
     line-height: 1.12;
   }
 }
